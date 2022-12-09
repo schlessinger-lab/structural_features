@@ -9,6 +9,7 @@
 # import statements
 import sys
 import os
+import glob
 
 # functions
 def write_output(out_name, out_str):
@@ -73,4 +74,18 @@ def make_background(input_folder, file_id, output_dir_name):
     return 1
 
 if __name__ == '__main__':
-    make_background(*sys.argv[1:])
+    make_background('prot_backout_cmap', 'prot_over', 'prot_over')
+    make_background('prot_backout_cmap', 'prot_under', 'prot_under')
+    # make_background('norm_breast', 'gtex_breast', 'gtex_breast250')
+    # make_background(*sys.argv[1:])
+    # make_background('nonbreast_gtex_out/', 'all_ids', 'updated_human_background')
+    # files = glob.glob('rna_backout/*normal*')
+
+    # # files = glob.glob('proteomics_backout/*')
+    # for f in files:
+    #     # id = f.split('_')[-1].split('.')[0]
+    #     # make_background('proteomics_backout', id, id)
+
+
+    #     id = f.split('_')[-1].split('-')[0]
+    #     make_background('rna_backout', id+'-normal-tissue', id)
