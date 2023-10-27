@@ -114,7 +114,7 @@ def get_num_contacts(gnuid):
     Inputs:
         gnuid (str): gene or uniprot ID
     Outputs:
-        num_contacts (int): nunber of amino acid contacts
+        num_contacts (int): nunber of amino acid contacts in the protein
     '''
     path_to_db = 'databases/contacts/'
     line_index = -1
